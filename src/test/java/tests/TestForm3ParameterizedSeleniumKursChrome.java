@@ -79,16 +79,16 @@ public class TestForm3ParameterizedSeleniumKursChrome {
 
 	@Before
 	public void setUp() throws Exception {
-		System.out.println("Initialisiere Webdriver");
-		driver = DriverHelper.getDriver(browsername);
-		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-		driver.manage().window().maximize();
+		System.out.println("initialisiere Webdriver");
+		driver = DriverHelper.getDriver(Config.getBrowserName("browser"));
 		driver.get(Config.getBasURL());
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 	}
 
 	@After
 	public void tearDown() throws Exception {
-		System.out.println("Test abgeschlossen- ich r‰ume");
+		System.out.println("Test abgeschlossen- ich r√§ume");
 		driver.close();
 	}
 
