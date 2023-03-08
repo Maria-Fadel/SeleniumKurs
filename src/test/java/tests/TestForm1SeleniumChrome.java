@@ -20,20 +20,20 @@ import pages.SeleniumKursLoginPage;
 import pages.SeleniumKursTestApplikatioinenPage;
 import pages.SeleniumKursTestForm1Page;
 
+import de.kiel.seleniumkurs.configuration.Config;
+import de.kiel.seleniumkurs.configuration.DriverHelper;
+
 public class TestForm1SeleniumChrome {
 
 	WebDriver driver;
 
 	@Before
 	public void setUp() throws Exception {
+		
+				
 		System.out.println("initialisiere Webdriver");
-		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
-		driver = new ChromeDriver();
-
-		// System.setProperty("webdriver.opera.driver", "./drivers/operadriver.exe");
-		// driver = new OperaDriver();
-
-		driver.get("https://seleniumkurs.codingsolo.de/login");
+		driver = DriverHelper.getDriver(Config.getBrowserName("browser"));
+		driver.get(Config.getBasURL());
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 
