@@ -33,13 +33,14 @@ public class TestVisitGoogleFirefox {
 	public void tearDown() throws Exception {
 
 		System.out.println("Test abgeschlossen");
-		// driver.close();
+		
 	}
 	
 	@Test
 	public void test() {
 		System.out.println("test ");
 		System.out.println("test change ");
+		System.out.println("------------------------------------------------------------------------------------------------ ");
 		System.out.println("------------------------------------------------------------------------------------------------ ");
 		System.out.println("------------------------------------------------------------------------------------------------ ");
 	}
