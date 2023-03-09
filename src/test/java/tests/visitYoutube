@@ -33,6 +33,7 @@ public class TestVisitGoogleFirefox {
 	public void tearDown() throws Exception {
 
 		System.out.println("Test abgeschlossen");
+		System.out.println("Test abgeschlossen");
 		
 	}
 	
